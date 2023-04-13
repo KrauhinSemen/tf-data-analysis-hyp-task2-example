@@ -22,4 +22,4 @@ def solution(x: np.array, y: np.array) -> bool:
       if f[j][1] >= y[j] >= f[j][0]:
         tr_y += 1
 
-    return tr_x < tr_y  # Ваш ответ, True или False
+    return tr_x > tr_y  # Ваш ответ, True или False

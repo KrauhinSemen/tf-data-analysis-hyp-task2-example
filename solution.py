@@ -28,4 +28,4 @@ def solution(x: np.array, y: np.array) -> bool:
       else:
            fl_y+=1
 
-    return tr_x/fl_x < tr_y/fl_y + 0.08  # Ваш ответ, True или False
+    return tr_x/fl_x < tr_y/fl_y  # Ваш ответ, True или False

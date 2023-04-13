@@ -13,13 +13,19 @@ def solution(x: np.array, y: np.array) -> bool:
     # квантили 0.4 и 0.6 от исторических данных
 
     tr_x = 0
+    fl_x = 0
     for j in range(len(x.tolist())):
       if f[j][1] >= x[j] >= f[j][0]:
-        tr_x += 1
+           tr_x += 1
+      else:
+           fl_x += 1
 
     tr_y = 0
+    fl_y = 0
     for j in range(len(y.tolist())):
       if f[j][1] >= y[j] >= f[j][0]:
-        tr_y += 1
+           tr_y += 1
+      else:
+           fl_y+=1
 
-    return tr_x < tr_y  # Ваш ответ, True или False
+    return tr_x/fl_x < tr_y/fl_y + 0.08  # Ваш ответ, True или False
